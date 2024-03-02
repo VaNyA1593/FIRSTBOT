@@ -1,0 +1,12 @@
+import random
+
+def gen_pass(pass_length):
+    elements = "qwertyuiop[]\sdfghjkl;'zxcvbbnm,./1234567890QWERTYUIOPASDFGHJKLZXCVBNM"
+    password = ""
+    for i in range(pass_length):
+        password += random.choice(elements)
+    return password
+def coin():
+    res = ["Yes","No"]
+    result = random.choice(res)
+    return result
