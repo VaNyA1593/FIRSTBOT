@@ -22,10 +22,10 @@ async def on_message(message):
     elif message.content.startswith('$bye'):
         await message.channel.send("Bye!")
     elif message.content.startswith("$password"):
-        await message.channel.send("Твой пароль: " + gen_pass(10))
+        await message.channel.send("Your password: " + gen_pass(10))
     elif message.content.startswith("$coin"):
         await message.channel.send(coin())
-    else:
-        await message.channel.send(message.content)
+    elif message.content.startswith("$help"):
+        await message.channel.send("Command list: Command: $hello, response: Hi!, command: $bye, response: Bye!, command: $password,  response: Your password:(random password), command: $coin, response: (Yes or no), command $help, response:(bot commands)")
 
 client.run("TOKEN")
